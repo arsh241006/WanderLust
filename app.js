@@ -69,6 +69,10 @@ const sessionOptions = {
 //   res.send("i am root");
 // });
 
+app.set("trust proxy", 1);
+
+app.use(session(sessionOptions));
+
 app.use(session(sessionOptions));
 app.use(flash());
 
